@@ -1,0 +1,19 @@
+# Ignore all JPEG images
+*.jpeg
+
+# Ignore all JPG images
+*.jpg
+
+# Ignore all MP4 videos
+*.mp4
+
+# You may also want to ignore other common image and video file types
+*.png
+*.gif
+*.bmp
+*.svg
+*.mov
+*.avi
+*.flv
+*.wmv
+*.m4v
