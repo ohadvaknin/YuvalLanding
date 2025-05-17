@@ -1,129 +1,344 @@
-body {
-    background-color: #ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;700&display=swap');
+
+/* --- Global Styles & Reset --- */
+* {
     margin: 0;
     padding: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  .header {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans Hebrew', Arial, sans-serif;
+    line-height: 1.7;
+    background-color: #f9f9f9; /* Light grey background */
+    color: #333333; /* Dark grey text */
+    direction: rtl; /* Right-to-left for Hebrew */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Primary blue for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-bottom: 0.75em;
+    color: #2c3e50; /* Darker blue/slate for headings */
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.site-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo-area h1 {
+    font-size: 1.8em;
+    margin-bottom: 0;
+    color: #007bff;
+}
+.logo-area h1 a {
+    color: inherit;
+}
+
+
+.logo-area .subtitle {
+    font-size: 0.9em;
+    color: #555555;
+    margin-top: 2px;
+}
+
+.main-nav ul {
+    list-style: none;
     display: flex;
-    align-items: baseline;
-  }
-  .top {
-    margin-right: 20px;
-  }
-  #h1 {
-    color: #333; /* Default text color */
-    transition: color 0.3s ease; /* Adding a smooth transition effect */
-    margin: 0;
-  }
-  #h1:hover {
-    color: #b03434; /* Color on hover */
-  }
-  h5 {
-    text-align: left;
-  }
-  .tabs {
-    display: flex;
-  }
-  .tabs a {
-    text-decoration: none;
-    color: #000000;
-    margin-right: 20px;
-  }
-  .content {
-    padding: 20px;
-  }
-  .photo-table {
+}
+
+.main-nav ul li {
+    margin-left: 25px; /* For RTL, this is space between items */
+}
+.main-nav ul li:last-child {
+    margin-left: 0;
+}
+
+.main-nav ul li a {
+    font-weight: 500;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.main-nav ul li a.active,
+.main-nav ul li a:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+}
+
+
+/* --- Hero Section (Optional for Index) --- */
+.hero {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.2em;
+    color: #fff;
+}
+.hero p {
+    font-size: 1.2em;
+    font-weight: 400;
+}
+
+
+/* --- Portfolio Grid (Index Page) --- */
+.portfolio-section {
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    padding: 5px;
-  }
-  .photo {
-    position: relative;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    background-color: #ffffff;
+    border-radius: 8px;
     overflow: hidden;
-  }
-  .photo img {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.portfolio-item img.thumbnail {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Ensures the image covers the area, may crop */
+}
+
+.portfolio-item-content {
+    padding: 20px;
+}
+
+.portfolio-item-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+.portfolio-item-content h3 a {
+     color: #2c3e50;
+}
+.portfolio-item-content h3 a:hover {
+     color: #007bff;
+}
+
+
+/* --- Project Page Specific Styles --- */
+.project-page-header {
+    padding: 30px 0;
+    background-color: #e9ecef; /* Light background for project title area */
+    text-align: center;
+    border-bottom: 1px solid #ced4da;
+}
+.project-page-header h1 { /* Project Title */
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.project-main-image-wrapper {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.project-main-image-wrapper img {
+    max-width: 100%;
+    max-height: 550px; /* Control max height of main project image */
+    width: auto; /* Maintain aspect ratio if not full width */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.project-content-section {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.project-content-section h3 { /* Subheadings like "על הלקוח" */
+    font-size: 1.8em;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block; /* So border only spans text width */
+}
+.project-content-section h3:first-child {
+    margin-top: 0;
+}
+
+.project-media-gallery {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.project-media-gallery h4 { /* Title for media gallery like "Videos" or "More Images" */
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: start; /* Align items to the start of the track */
+}
+
+.media-grid video,
+.media-grid img {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
-  }
-  .photo:hover img {
-    transform: scale(1.1);
-  }
-  .photo .text-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    padding: 10px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    float: right;
-  }
-  .photo:hover .text-overlay {
-    opacity: 1;
-  }
-  .photo:hover .text-overlay {
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-  #letstalk {
-    text-align: right;
-    margin-right: 20px;
-  }
-  .container {
-    display: flex;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    align-items: center;
-    flex-direction: column;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+/* --- Footer --- */
+.site-footer {
     text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  .top {
-    margin-right: 20px;
-  }
-  #h1 {
-    color: #333; /* Default text color */
-    transition: color 0.3s ease; /* Adding a smooth transition effect */
-    margin: 0;
-  }
-  #h1:hover {
-    color: #b03434; /* Color on hover */
-  }
-  h5 {
-    text-align: left;
-  }
-  .header:hover {
-    color: #b03434; /* Color on hover */
-  }
-  p {
-    line-height: 1;
-    margin: 12px 0;
-    margin-left: 36px;
-    margin-right: 36px;
-  }
-  #desc {
-    direction: rtl;
-    line-height: 1;
-    margin: 12px 0;
-    text-align: right;
-    margin-right: 60px;
-    margin-right: 60px;
-  }
-  #bbb {
-    max-width: 85%; /* Set the maximum width to the container width */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the image horizontally */
-  }
+    padding: 30px 0;
+    background-color: #343a40;
+    color: #f8f9fa;
+    margin-top: 40px;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo-area {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .main-nav ul {
+        justify-content: center;
+        padding-right: 0; /* Reset padding for centered items */
+    }
+    .main-nav ul li {
+        margin: 0 10px; /* Adjust spacing for horizontal nav */
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* Single column on smaller tablets/mobiles */
+    }
+
+    .project-page-header h1 {
+        font-size: 2em;
+    }
+    .project-content-section h3 {
+        font-size: 1.5em;
+    }
+    .project-media-gallery h4 {
+        font-size: 1.4em;
+    }
+    .media-grid {
+         grid-template-columns: 1fr; /* Single column for media on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-area h1 {
+        font-size: 1.6em;
+    }
+    .logo-area .subtitle {
+        font-size: 0.8em;
+    }
+    .main-nav ul li a {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+     .portfolio-item-content h3 {
+        font-size: 1.2em;
+    }
+     .project-page-header h1 {
+        font-size: 1.7em;
+    }
+    .project-content-section {
+        padding: 20px;
+    }
+    .project-content-section h3 {
+        font-size: 1.3em;
+    }
+}

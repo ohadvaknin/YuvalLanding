@@ -5,68 +5,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <title>קק"ל</title>
+  <title>פרויקט קק״ל - יובל מגרפטה</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="top">
-          <h1 id="h1">יובל מגרפטה</h1>
-          <h5>קופירייטרית</h5>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-area">
+                <h1><a href="index.html">יובל מגרפטה</a></h1>
+                <p class="subtitle">קופירייטרית</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">בחזרה לתיק העבודות</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="tabs">
-            <a href="./index.html">עבודות</a>
+    </header>
+
+    <main>
+        <section class="project-page-header">
+            <div class="container">
+                <h1>קק״ל - קמפיין ט"ו בשבט ואילנית</h1>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="project-main-image-wrapper">
+                <img src="./kakal.jpg" alt="תמונה ראשית של פרויקט קק״ל">
+            </div>
+
+            <section class="project-content-section">
+                <h3>על הלקוח</h3>
+                <p>קק"ל, כארגון הירוק הגדול בישראל, ממלא תפקיד חשוב בהגנה על השטחים הפתוחים ובטיפוחם. בשנים האחרונות קק"ל חרטה על דגלה להוביל את המאבק במשבר האקלים והשלכות ההתחממות הגלובלית.</p>
+                
+                <h3>האתגר (קמפיין אילנית)</h3>
+                <p>בינינו, יש חג יותר יבש מט"ו בשבט? (עמכם הסליחה, הבדיחה מתבקשת). ועכשיו ברצינות- איך מחברים בין ט"ו בשבט, או בשמו השני, חג קק"ל, לדור הצעיר? לכבוד הקמפיין השנתי הגדול, התבקשנו לפנות ולהזמין קהל בין הגילים 25-30 לאירועים הגדולים של קק"ל.</p>
+                
+                <h3>הרעיון (קמפיין אילנית)</h3>
+                <p>כל שנה אנחנו חוגגים לאילנות, הפעם הגיע הזמן להרים לאילניות! תופתעו, בשקט בשקט, בלילה, כשאף אחד לא רואה, מסתתרים להם בטיקטוק דור הניינטיז. נו, הדור שגדל על אחד העם 1. כבר מעל 20 שנה שענת מגן שבו מפיחה חיים בדמות אילנית, עם ציטוטים ומערכונים שמלווים אותנו עד היום… פייר? מגיע לה חג!</p>
+                
+                <h3>תוצאות (קמפיין אילנית)</h3>
+                <p>מעל 2.2 מיליון צפיות, 607,000 משתמשים שונים שנחשפו לתכנים, מעל 105K מעורבויות.</p>
+            </section>
+
+            <section class="project-media-gallery">
+                <h4>סרטונים מקמפיין אילנית</h4>
+                <div class="media-grid">
+                    <div><video controls poster="./kakal.jpg"><source src="./kkl1.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+                    <div><video controls poster="./kakal.jpg"><source src="./kkl2.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+                    <div><video controls poster="./kakal.jpg"><source src="./kkl3.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+                </div>
+            </section>
+
+            <section class="project-content-section">
+                <h3>האתגר (קמפיין גרטה/נטע)</h3>
+                <p>קק"ל כארגון שם לעצמו למטרה לשמור על הסביבה ולקחת בעלות על נושא הלחימה בהתחממות הגלובלית. התבקשנו להעלות את הנושא לסדר היום ולייצר מהלך שיניע לפעולה.</p>
+                
+                <h3>הרעיון (קמפיין גרטה/נטע)</h3>
+                <p>אז ניצלנו את המצב, או יותר נכון את גרטה. אותה ילדה שנכנסה ללב של כולנו ב-2019 הפכה למוקצה בחברה הישראלית בין לילה (מישהי פה תמכה בצד הלא נכון של המפה…). אז שלום ולא להתראות לגרטה ו-וולקאם לנטע.</p>
+            </section>
+            
+            <section class="project-media-gallery">
+                <h4>קמפיין גרטה/נטע</h4>
+                <div class="media-grid" style="grid-template-columns: 1fr;"> <!-- Single column for this specific image -->
+                     <img src="./greta.jpeg" alt="קמפיין נטע ברזילי - אלטרנטיבה לגרטה תונברג">
+                </div>
+            </section>
         </div>
-    </div>
-    <div class="container">
-    <div class="photo">
-      <img src="./kakal.jpg" alt="kakal">
-    </div>
-    <div id="desc" dir="rtl">
-        <h3>על הלקוח</h3>
-        <p>קק"ל, כארגון הירוק הגדול בישראל, ממלא תפקיד חשוב בהגנה על השטחים הפתוחים ובטיפוחם. בשנים האחרונות קק"ל חרטה על דגלה להוביל את המאבק במשבר האקלים והשלכות ההתחממות הגלובלית</p>
-        <h3>האתגר</h3>
-        <p>בינינו, יש חג יותר יבש מט"ו בשבט? (עמכם הסליחה, הבדיחה מתבקשת) 
-            ועכשיו ברצינות- איך מחברים בין ט"ו בשבט, או בשמו השני, חג קק"ל, לדור הצעיר?
-            לכבוד הקמפיין השנתי הגדול, התבקשנו לפנות ולהזמין קהל בין הגילים 25-30 לאירועים הגדולים של קק"ל.</p>
-        <h3>הרעיון</h3>
-        <p> כל שנה אנחנו חוגגים לאילנות, הפעם הגיע הזמן להרים לאילניות! תופתעו, בשקט בשקט, בלילה, כשאף אחד לא רואה, מסתתרים להם בטיקטוק דור הניינטיז. נו, הדור שגדל על אחד העם 1. כבר מעל 20 שנה שענת מגן שבו מפיחה חיים בדמות אילנית, עם ציטוטים ומערכונים שמלווים אותנו עד היום… פייר? מגיע לה חג!</p>
-        <h3>תוצאות</h3>
-        <p> מעל 2.2 מיליון צפיות 607,000 משתמשים שונים שנחשפו לתכנים מעל 105K מעורבויות</p>
-    </div>
-    <table>
-        <tr>
-            <td><video width="640" height="360" controls>
-                <source src="./kkl1.mp4".mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></td>
-            <td><video width="640" height="360" controls>
-                <source src="./kkl2.mp4".mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></td>
-        </tr>
-        <tr>
-            <td colspan="2"><video width="640" height="360" controls>
-                <source src="./kkl3.mp4".mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video></td>
-        </tr>
-    </table>
-    <div id="vids">
-    
-    
-    
-    <div id="desc">
-        <h3>האתגר</h3>
-        <p>קק"ל כארגון שם לעצמו למטרה לשמור על הסביבה ולקחת בעלות על נושא הלחימה בהתחממות הגלובלית. התבקשנו להעלות את הנושא לסדר היום ולייצר מהלך שיניע לפעולה. </p>
-        <h3>הרעיון</h3>
-        <p>אז ניצלנו את המצב, או יותר נכון את גרטה. אותה ילדה שנכנסה ללב של כולנו ב-2019 הפכה למוקצה בחברה הישראלית בין לילה (מישהי פה תמכה בצד הלא נכון של המפה…) 
-            אז שלום ולא להתראות לגרטה ו-וולקאם לנטע.</p>
-    
-    </div>
-        <img id="bbb" src="./greta.jpeg" alt="lime">
-    </div>
-  </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 יובל מגרפטה. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
 </body>
 
 </html>

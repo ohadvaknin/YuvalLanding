@@ -1,53 +1,93 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יובל מגרפטה - קופירייטרית</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-area">
+                <h1><a href="index.html">יובל מגרפטה</a></h1>
+                <p class="subtitle">קופירייטרית</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">עבודות</a></li>
+                    <!-- Add more links here if needed, e.g., About, Contact -->
+                    <!-- <li><a href="about.html">אודות</a></li> -->
+                    <!-- <li><a href="contact.html">יצירת קשר</a></li> -->
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="header">
-    <div class="top">
-      <h1 id="h1">יובל מגרפטה</h1>
-      <h5>קופירייטרית</h5>
-    </div>
-    <div class="tabs">
-        <a href="#">עבודות</a>
-    </div>
-</div>
-</div>
+    <main>
+        <section class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">תיק עבודות</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <a href="kakal_page.html">
+                            <img src="./kakal.jpg" alt="פרויקט קק״ל" class="thumbnail">
+                        </a>
+                        <div class="portfolio-item-content">
+                            <h3><a href="kakal_page.html">קק״ל - קמפיין ט"ו בשבט ואילנית</a></h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="meuhedet_page.html">
+                            <img src="./meuhedet.jpg" alt="פרויקט מאוחדת" class="thumbnail">
+                        </a>
+                        <div class="portfolio-item-content">
+                            <h3><a href="meuhedet_page.html">מאוחדת - קמפיין בריאות</a></h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="wolt_page.html">
+                            <img src="./wolt.jpg" alt="פרויקט Wolt" class="thumbnail">
+                        </a>
+                        <div class="portfolio-item-content">
+                            <h3><a href="wolt_page.html">Wolt - קמפיין משלוחים</a></h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="lime_page.html">
+                            <img src="./line.jpg" alt="פרויקט Lime" class="thumbnail">
+                        </a>
+                        <div class="portfolio-item-content">
+                            <h3><a href="lime_page.html">Lime - קמפיין תחבורה ירוקה</a></h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="audiocodes_page.html">
+                            <img src="./audiocodes.jpg" alt="פרויקט AudioCodes" class="thumbnail">
+                        </a>
+                        <div class="portfolio-item-content">
+                            <h3><a href="audiocodes_page.html">AudioCodes - מיתוג וקופירייטינג B2B</a></h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <a href="histadrut_page.html">
+                            <img src="./histadrut.jpg" alt="פרויקט ההסתדרות" class="thumbnail">
+                        </a>
+                        <div class="portfolio-item-content">
+                            <h3><a href="histadrut_page.html">ההסתדרות - קמפיין חברתי</a></h3>
+                        </div>
+                    </div>
+                    <!-- Add more portfolio items as needed -->
+                </div>
+            </div>
+        </section>
+    </main>
 
-<div class="content">
-  <h1 id="letstalk"> לטס טוק דה טוק</h3>
-  <div class="photo-table">
-    <div class="photo" onclick="window.location.href='kakal_page.html'">
-      <img src="./kakal.jpg" alt="kakal">
-    </div>
-    <div class="photo" onclick="window.location.href='meuhedet_page.html'">
-      <img src="./meuhedet.jpg" alt="meuhedet">
-    </div>
-    <div class="photo" onclick="window.location.href='wolt_page.html'">
-      <img src="./wolt.jpg" alt="wolt">
-    </div>
-    <div class="photo" onclick="window.location.href='lime_page.html'">
-      <img src="./line.jpg" alt="lime">
-    </div>
-    <div class="photo" onclick="window.location.href='audiocodes_page.html'">
-      <img src="./audiocodes.jpg" alt="audiocodes">
-    </div>
-    <div class="photo" onclick="window.location.href='histadrut_page.html'">
-      <img src="./histadrut.jpg" alt="histadrut">
-    </div>
-    <!-- Add more photo divs as needed -->
-  </div>
-</div>
-
-<script>
-  // JavaScript code for toggling down the site
-  // Add your script here if needed
-</script>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 יובל מגרפטה. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
